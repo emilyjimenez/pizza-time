@@ -2,11 +2,11 @@
 function Pizza(size, sauce, toppings) {
   this.sauce = sauce;
   this.size = size;
-  this.toppings = [];
+  this.toppings = toppings;
 }
 
 Pizza.prototype.fullDisplay = function() {
-  return ", You ordered a " + this.size + " pizza, with" + this.sauce + ", and these toppings: " + this.toppings;
+  return "You ordered a " + this.size + " pizza, with" + this.sauce + ", and these toppings: " + this.toppings;
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -22,9 +22,15 @@ $(document).ready(function() {
    var name = $("#name").val();
    var size = $("#pizzaSize").val();
    var sauce = $("#pizzaSauce").val();
-   var pizzaItem = new Pizza(movie, time, age);
+   var toppings = [];
+   $("input:checkbox[name=pizzaToppings]:checked").each(function(){
+     toppings.push($(this.val()));
+   })
+   var pizzaItem = new Pizza(size, sauce, toppings);
    var pizzaDisplay = pizzaItem.fullDisplay();
-   $(".result").text(name + pizzaDisplay);
+   $(".order").show();
+   $(".displayName").text(name);
+   $(".result").text(pizzaDisplay);
    $(".cost").text();
 
   });
