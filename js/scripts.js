@@ -12,9 +12,7 @@ Pizza.prototype.fullDisplay = function() {
 Pizza.prototype.calculateCost = function() {
   var sizeCost;
   var sauceCost = 2;
-  var toppingsMeat = 0;
-  var toppingsVeg = 0;
-  var toppingsOther = 0;
+  var toppingsCost = 0;
   if (this.size === "small") {
     sizeCost = 5;
   } else if (this.size === "medium") {
@@ -22,24 +20,11 @@ Pizza.prototype.calculateCost = function() {
   } else if (this.size === "large") {
     sizeCost = 10;
   }
-  for (var i = 0; i < this.toppings.length; i++) {
-    if (this.toppings[i] === "pepperoni" || "sausage" || "ham" || "bacon") {
-      toppingsMeat +=1.25;
-    } else {
-      toppingsMeat = 0;
+  this.toppings.forEach(function(topping) {
+    toppingsCost +=1.50;
+  });
+    return sizeCost + sauceCost + toppingsCost;
     }
-    if (this.toppings[i] === "bell peppers" || "mushrooms" || "onion" || "artichoke" || "olives") {
-      toppingsVeg +=1;
-    } else {
-      toppingsVeg = 0;
-    }
-    if (this.toppings[i] === "sardines" || "garlic" || "pineapple" ) {
-      toppingsOther +=0.5;
-    } else {
-      toppingsOther = 0;
-    }
-  } return sizeCost + sauceCost + toppingsMeat + toppingsVeg + toppingsOther;
-}
 
 
 
