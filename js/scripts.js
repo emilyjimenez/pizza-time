@@ -6,7 +6,7 @@ function Pizza(size, sauce, toppings) {
 }
 
 Pizza.prototype.fullDisplay = function() {
-  return "You ordered a " + this.size + " pizza, with" + this.sauce + ", and these toppings: " + this.toppings;
+  return "You ordered a " + this.size + " pizza, with " + this.sauce + " sauce, and these toppings: " + this.toppings;
 }
 
 Pizza.prototype.calculateCost = function() {
@@ -44,7 +44,7 @@ $(document).ready(function() {
    $(".order").show();
    $(".displayName").text(name);
    $(".result").text(pizzaDisplay);
-   $(".cost").text(pizzaCost);
+   $(".cost").text("Total cost: $" + pizzaCost);
 
   });
 });
