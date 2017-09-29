@@ -5,10 +5,87 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Pizza Time</title>
   </head>
   <body>
     <div class="container">
+      <h2>What time is it?!</h2>
+      <h3>IT'S PIZZA TIME!</h3>
+      <h4>🍕🍕🍕</h4>
+        <p class="lead">Fill out the form below to build out your pizza.</p>
+
+      <form id="pizzaForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="size">Size:</label>
+          <br>
+          <label class="radio-inline"><input type="radio" name="size" id="pizzaSize" value="small">Small</label>
+          <label class="radio-inline"><input type="radio" name="size" id="pizzaSize" value="medium">Medium</label>
+          <label class="radio-inline"><input type="radio" name="size" id="pizzaSize" value="large">Large</label>
+        </div>
+        <div class="form-group">
+          <label for="sauce">Sauce:</label>
+          <br>
+          <label class="radio-inline"><input type="radio" name="sauce" id="pizzaSize" value="marinara">Marinara</label>
+          <label class="radio-inline"><input type="radio" name="sauce" id="pizzaSize" value="alfredo">Garlic Alfredo</label>
+          <label class="radio-inline"><input type="radio" name="sauce" id="pizzaSize" value="pesto">Pesto</label>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="pepperoni">Pepperoni</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="sausage">Sausage</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="ham">Ham</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="bacon">Bacon</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="bell peppers">Bell Peppers</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="mushrooms">Mushrooms</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="onion">Onion</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="artichoke">Artichoke</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="olives">Olives</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="sardines">Sardines</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="garlic">Garlic</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" id="pizzaToppings" value="pineapple">Pineapple (THE BEST TOPPING EVAR)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" name="button" class="btn btn-warning">Take me to pizza heaven!</button>
+      </form>
+      <br>
+      <div class="result">
+      </div>
+      <div class="cost">
+      </div>
     </div>
   </body>
 </html>
